@@ -72,6 +72,7 @@ namespace Modelo.SQL
         public string[] Query_values
         {
             get { return query_values; }
+            set { query_values = value; }
         }
 
         public void BuscarCliente(string dpiCliente)
@@ -102,6 +103,28 @@ namespace Modelo.SQL
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                desconexion_db();
+            }
+        }
+
+        public bool EliminarCliente(string dpiCliente)
+        {
+            try
+            {
+                conexion_db();
+                SqlCommand cmd = new SqlCommand("EliminarCliente", getConexion());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@dpi_cliente", dpiCliente);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
             }
             finally
             {

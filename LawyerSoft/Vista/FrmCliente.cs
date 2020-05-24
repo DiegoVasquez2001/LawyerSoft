@@ -111,11 +111,37 @@ namespace Vista
                 txtCorreo.Text = sqlCliente.Query_values[5];
                 txtDireccion.Text = sqlCliente.Query_values[6];
                 txtBusqueda.Clear();
+                ReiniciarMatrizData();
             }
             else 
             {
                 MessageBox.Show("CAMPO DE BUSQUEDA VACÍO");
                 txtBusqueda.Clear();
+            }
+        }
+
+        void ReiniciarMatrizData()
+        {
+            for (int i = 0; i < sqlCliente.Query_values.Length; i++)
+            {
+                sqlCliente.Query_values[i] = "";
+            }
+        }
+
+        string dpiCliente = "";
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            dpiCliente = txtDPI.Text;
+
+            if (sqlCliente.EliminarCliente(dpiCliente) == true)
+            {
+                MessageBox.Show("REGISTRO ELIMINADO");
+                Limpiar();
+            }
+            else
+            {
+                MessageBox.Show("REGISTRO NO ELIMINADO");
+                Limpiar();
             }
         }
     }
