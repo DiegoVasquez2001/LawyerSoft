@@ -42,5 +42,11 @@ namespace Vista
             panelDesktop.Controls.Add(formulario);
             formulario.Show();
         }
+
+        private void btnExpedientes_Click(object sender, EventArgs e)
+        {
+            FrmExpediente frmExpediente = new FrmExpediente();
+            Formularios(frmExpediente);
+        }
     }
 }

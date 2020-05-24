@@ -9,3 +9,4 @@ I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.exe
 I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.pdb
 I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.FrmMenu.resources
 I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.FrmCliente.resources
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.FrmExpediente.resources
