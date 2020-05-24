@@ -32,19 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
-            this.panelInfo = new System.Windows.Forms.Panel();
-            this.labelDate = new System.Windows.Forms.Label();
-            this.labelHour = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.timerControl = new System.Windows.Forms.Timer(this.components);
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.btnAnotaciones = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.btnExpedientes = new System.Windows.Forms.Button();
+            this.panelInfo = new System.Windows.Forms.Panel();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.labelHour = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.timerControl = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
-            this.panelInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -72,51 +72,6 @@
             this.labelTitle.Size = new System.Drawing.Size(88, 18);
             this.labelTitle.TabIndex = 6;
             this.labelTitle.Text = "LawyerSoft";
-            // 
-            // panelInfo
-            // 
-            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.panelInfo.Controls.Add(this.labelDate);
-            this.panelInfo.Controls.Add(this.labelHour);
-            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInfo.Location = new System.Drawing.Point(122, 0);
-            this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(750, 35);
-            this.panelInfo.TabIndex = 2;
-            // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.labelDate.Location = new System.Drawing.Point(5, 9);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(80, 17);
-            this.labelDate.TabIndex = 2;
-            this.labelDate.Text = "dd/mm/yyyy";
-            // 
-            // labelHour
-            // 
-            this.labelHour.AutoSize = true;
-            this.labelHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.labelHour.Location = new System.Drawing.Point(88, 9);
-            this.labelHour.Name = "labelHour";
-            this.labelHour.Size = new System.Drawing.Size(39, 17);
-            this.labelHour.TabIndex = 1;
-            this.labelHour.Text = "00:00";
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(122, 35);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(750, 450);
-            this.panelDesktop.TabIndex = 3;
-            // 
-            // timerControl
-            // 
-            this.timerControl.Enabled = true;
-            this.timerControl.Tick += new System.EventHandler(this.timerControl_Tick);
             // 
             // pictureBoxLogo
             // 
@@ -193,6 +148,52 @@
             this.btnExpedientes.Text = "Expedientes";
             this.btnExpedientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExpedientes.UseVisualStyleBackColor = false;
+            this.btnExpedientes.Click += new System.EventHandler(this.btnExpedientes_Click);
+            // 
+            // panelInfo
+            // 
+            this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.panelInfo.Controls.Add(this.labelDate);
+            this.panelInfo.Controls.Add(this.labelHour);
+            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelInfo.Location = new System.Drawing.Point(122, 0);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(750, 35);
+            this.panelInfo.TabIndex = 2;
+            // 
+            // labelDate
+            // 
+            this.labelDate.AutoSize = true;
+            this.labelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.labelDate.Location = new System.Drawing.Point(5, 9);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(80, 17);
+            this.labelDate.TabIndex = 2;
+            this.labelDate.Text = "dd/mm/yyyy";
+            // 
+            // labelHour
+            // 
+            this.labelHour.AutoSize = true;
+            this.labelHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.labelHour.Location = new System.Drawing.Point(88, 9);
+            this.labelHour.Name = "labelHour";
+            this.labelHour.Size = new System.Drawing.Size(39, 17);
+            this.labelHour.TabIndex = 1;
+            this.labelHour.Text = "00:00";
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(122, 35);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(750, 450);
+            this.panelDesktop.TabIndex = 3;
+            // 
+            // timerControl
+            // 
+            this.timerControl.Enabled = true;
+            this.timerControl.Tick += new System.EventHandler(this.timerControl_Tick);
             // 
             // FrmMenu
             // 
@@ -213,9 +214,9 @@
             this.Text = "LawyerSoft";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

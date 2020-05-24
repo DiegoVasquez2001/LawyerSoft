@@ -55,6 +55,12 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExpediente.Designer.cs">
+      <DependentUpon>FrmExpediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExpediente.resx">
+      <DependentUpon>FrmExpediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
@@ -97,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notepad Bloc notes 2.ico" />
+    <None Include="Resources\Apply.png" />
+    <None Include="Resources\List.png" />
+    <None Include="Resources\Open file.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\Exit.png" />
     <None Include="Resources\Erase.png" />
