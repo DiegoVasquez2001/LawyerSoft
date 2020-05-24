@@ -1,4 +1,5 @@
-﻿using System;
+﻿//CLASE CLIENTE, DESARROLLADOR: Diego Vásquez
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ namespace Modelo.Objetos
 {
     public class clsCliente
     {
+        //ATRIBUTOS DE LA CLASE CLIENTE
         private string dpiCliente;
 
         public string DpiCliente

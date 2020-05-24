@@ -23,6 +23,7 @@ namespace Vista
             this.Close();
         }
 
+        //FUNCION LIMPIAR, PARA BORRAR DATA DE LOS TEXTBOX
         void Limpiar()
         {
             txtApellidos.Clear();
@@ -35,9 +36,12 @@ namespace Vista
             txtTelefono.Clear();
             txtDPI.Focus();
         }
+
+        //CONSTRUCTOR DE LOS OBJETOS CLIENTE Y TCLIENTE
         clsTCliente sqlCliente = new clsTCliente();
         clsCliente objCliente = new clsCliente();
 
+        //BOTON REGISTRAR
         private void buttonRegistrar_Click(object sender, EventArgs e)
         {
             if (txtDPI.Text.Equals("") || txtNombre.Text.Equals("") || txtApellidos.Text.Equals("") || txtTelefono.Text.Equals("") || txtCelular.Text.Equals("") || txtCorreo.Text.Equals("") || txtDireccion.Text.Equals(""))
@@ -67,6 +71,7 @@ namespace Vista
             }
         }
 
+        //BOTON MODIFICAR
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             if (txtDPI.Text.Equals("") || txtNombre.Text.Equals("") || txtApellidos.Text.Equals("") || txtTelefono.Text.Equals("") || txtCelular.Text.Equals("") || txtCorreo.Text.Equals("") || txtDireccion.Text.Equals(""))
@@ -96,6 +101,7 @@ namespace Vista
             }
         }
 
+        //BOTON BUSCAR
         string busqueda = "";
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
@@ -120,6 +126,7 @@ namespace Vista
             }
         }
 
+        //FUNCION PARA REINICIAR DATA DEL ARRAY
         void ReiniciarMatrizData()
         {
             for (int i = 0; i < sqlCliente.Query_values.Length; i++)
@@ -128,6 +135,7 @@ namespace Vista
             }
         }
 
+        //BOTON ELIMINAR
         string dpiCliente = "";
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
