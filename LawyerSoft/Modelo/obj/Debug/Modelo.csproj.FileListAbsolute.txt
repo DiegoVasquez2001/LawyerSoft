@@ -1,0 +1,5 @@
+I:\AGENDA JURIDICA\LawyerSoft\Modelo\bin\Debug\Modelo.dll
+I:\AGENDA JURIDICA\LawyerSoft\Modelo\bin\Debug\Modelo.pdb
+I:\AGENDA JURIDICA\LawyerSoft\Modelo\obj\Debug\Modelo.dll
+I:\AGENDA JURIDICA\LawyerSoft\Modelo\obj\Debug\Modelo.pdb
+I:\AGENDA JURIDICA\LawyerSoft\Modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache

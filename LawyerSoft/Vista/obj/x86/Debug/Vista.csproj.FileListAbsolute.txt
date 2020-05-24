@@ -1,0 +1,11 @@
+I:\AGENDA JURIDICA\LawyerSoft\Vista\bin\Debug\Vista.exe
+I:\AGENDA JURIDICA\LawyerSoft\Vista\bin\Debug\Vista.pdb
+I:\AGENDA JURIDICA\LawyerSoft\Vista\bin\Debug\Modelo.dll
+I:\AGENDA JURIDICA\LawyerSoft\Vista\bin\Debug\Modelo.pdb
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.csprojResolveAssemblyReference.cache
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.Properties.Resources.resources
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.csproj.GenerateResource.Cache
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.exe
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.pdb
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.FrmMenu.resources
+I:\AGENDA JURIDICA\LawyerSoft\Vista\obj\x86\Debug\Vista.FrmCliente.resources
