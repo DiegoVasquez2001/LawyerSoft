@@ -74,5 +74,15 @@ BEGIN
 	DELETE FROM cliente WHERE dpi_cliente=@dpi_cliente
 END
 
--- PROCEDIMIENTO ALMACENADO: CREAR EXPEDIENTE
+-- PROCEDIMIENTO ALMACENADO: CREAR CITA
 
+CREATE PROCEDURE RegistrarCita
+@id_cita varchar(50),
+@fecha_cita date,
+@hora_cita varchar(5),
+@asunto_cita varchar(255),
+@fk_cliente varchar(20)
+AS
+BEGIN
+	INSERT INTO cita VALUES(@id_cita, @fecha_cita, @hora_cita, @asunto_cita, @fk_cliente)
+END

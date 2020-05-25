@@ -48,5 +48,11 @@ namespace Vista
             FrmExpediente frmExpediente = new FrmExpediente();
             Formularios(frmExpediente);
         }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+            FrmCita frmCita = new FrmCita();
+            Formularios(frmCita);
+        }
     }
 }

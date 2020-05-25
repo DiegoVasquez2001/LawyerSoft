@@ -131,6 +131,7 @@
             this.btnCitas.TabIndex = 3;
             this.btnCitas.Text = "Citas";
             this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
             // 
             // btnExpedientes
             // 

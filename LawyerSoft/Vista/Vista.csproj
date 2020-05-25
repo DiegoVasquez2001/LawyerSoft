@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCita.Designer.cs">
+      <DependentUpon>FrmCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCita.resx">
+      <DependentUpon>FrmCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notepad Bloc notes 2.ico" />
+    <None Include="Resources\Clock.png" />
+    <None Include="Resources\Time.png" />
     <None Include="Resources\Apply.png" />
     <None Include="Resources\List.png" />
     <None Include="Resources\Open file.png" />
