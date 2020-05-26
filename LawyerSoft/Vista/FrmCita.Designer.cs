@@ -134,7 +134,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
             this.btnBuscar.Image = global::Vista.Properties.Resources.Search;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(523, 134);
+            this.btnBuscar.Location = new System.Drawing.Point(523, 136);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(90, 30);
             this.btnBuscar.TabIndex = 38;
@@ -307,6 +307,7 @@
             // 
             // txtCliente
             // 
+            this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(337, 141);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(180, 23);
@@ -423,6 +424,7 @@
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonRegistrar
             // 

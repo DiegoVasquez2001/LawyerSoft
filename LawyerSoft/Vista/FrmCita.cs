@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Modelo.SQL;
+using Modelo.Objetos;
 
 namespace Vista
 {
@@ -48,10 +50,81 @@ namespace Vista
             }
             return codigoCita=auxDpi+auxAsunto+auxFecha;
         }
+
+        clsCitas objCitas = new clsCitas();
+        clsTCita sqlCitas = new clsTCita();
+
         private void buttonRegistrar_Click(object sender, EventArgs e)
         {
-            txtNCita.Text =  GenerarCodigoCita(txtCliente.Text, cmbAsunto.SelectedItem.ToString(), dtpFecha.Value.ToShortDateString());
-            MessageBox.Show("GUARDE ESTE CÓDIGO: " + txtNCita.Text + " " + "PARA MODIFICAR LA CITA MÁS ADELANTE");
+            try
+            {
+                if (txtCliente.Text.Equals("") || cmbAsunto.Text.Equals("") || cmbHora.Text.Equals(""))
+                {
+                    MessageBox.Show("Hay campos vacíos, verifique por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    txtNCita.Text = GenerarCodigoCita(txtCliente.Text, cmbAsunto.SelectedItem.ToString(), dtpFecha.Value.ToShortDateString());
+                    objCitas.IdCita = txtNCita.Text.Trim();
+                    objCitas.FechaCita = dtpFecha.Value;
+                    objCitas.HoraCita = cmbHora.SelectedItem.ToString();
+                    objCitas.AsuntoCita = cmbAsunto.SelectedItem.ToString();
+                    objCitas.FkCliente = txtCliente.Text.Trim();
+
+                    if (sqlCitas.RegistrarCita(objCitas) == true)
+                    {
+                        MessageBox.Show("Cita Creada", "Registros", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Por favor, guarde este código: " + txtNCita.Text + " " + "para poder gestionar más adelante la cita, modificarla o eliminarla", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cita No Creada", "Registros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Numero de DPI no valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtCliente.Text.Equals("") || cmbAsunto.Text.Equals("") || cmbHora.Text.Equals(""))
+                {
+                    MessageBox.Show("Hay campos vacíos, verifique por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    string antiguoID = txtNCita.Text.Trim();
+                    txtNCita.Text = GenerarCodigoCita(txtCliente.Text, cmbAsunto.SelectedItem.ToString(), dtpFecha.Value.ToShortDateString());
+                    objCitas.IdCita = txtNCita.Text.Trim();
+                    objCitas.FechaCita = dtpFecha.Value;
+                    objCitas.HoraCita = cmbHora.SelectedItem.ToString();
+                    objCitas.AsuntoCita = cmbAsunto.SelectedItem.ToString();
+                    objCitas.FkCliente = txtCliente.Text.Trim();
+
+                    if (sqlCitas.EditarCita(objCitas, antiguoID) == true)
+                    {
+                        MessageBox.Show("Cita Modificada", "Registros", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Por favor, guarde este código: " + txtNCita.Text + " " + "para poder gestionar más adelante la cita, modificarla o eliminarla", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cita No Modificada", "Registros", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Numero de DPI no valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

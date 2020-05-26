@@ -33,7 +33,8 @@ namespace Modelo.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("El cliente no existe en los registros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally

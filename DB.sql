@@ -86,3 +86,31 @@ AS
 BEGIN
 	INSERT INTO cita VALUES(@id_cita, @fecha_cita, @hora_cita, @asunto_cita, @fk_cliente)
 END
+
+CREATE PROCEDURE EditarCita
+@antiguo_id varchar(50),
+@id_cita varchar(50),
+@fecha_cita date,
+@hora_cita varchar(5),
+@asunto_cita varchar(255),
+@fk_cliente varchar(20)
+AS
+BEGIN
+	UPDATE cita SET id_cita=@id_cita, fecha_cita=@fecha_cita, hora_cita=@hora_cita, asunto_cita=@asunto_cita, FK_cliente=@fk_cliente WHERE id_cita=@antiguo_id
+END
+
+CREATE PROCEDURE EliminarCita
+@id_cita varchar(50)
+AS
+BEGIN
+	DELETE FROM cita WHERE id_cita=@id_cita
+END
+
+SELECT*FROM cita;
+
+CREATE PROCEDURE RegistrarExpediente
+@numero_expediente int
+AS
+BEGIN
+	INSERT INTO expediente VALUES @numero_expediente
+END
