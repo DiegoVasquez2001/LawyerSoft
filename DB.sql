@@ -109,8 +109,13 @@ END
 SELECT*FROM cita;
 
 CREATE PROCEDURE RegistrarExpediente
-@numero_expediente int
+@numero_expediente int,
+@tipo_expediente VARCHAR(20),
+@estado_expediente VARCHAR(10),
+@fecha_expediente DATE,
+@FK_cliente VARCHAR(20)
 AS
 BEGIN
-	INSERT INTO expediente VALUES @numero_expediente
+	INSERT INTO expediente VALUES (@numero_expediente, @tipo_expediente, @estado_expediente, @fecha_expediente, @FK_cliente)
 END
+
